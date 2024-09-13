@@ -25,12 +25,14 @@
             padding: 20px 50px;
             background-color: #001f3f;
             color: white;
+            width: 100vw;
         }
 
         nav {
             display: flex;
             justify-content: center;
             margin-bottom: 30px;
+            flex-grow: 1;
         }
 
         .nav-btn {
@@ -62,11 +64,18 @@
             cursor: pointer;
         }
 
-        .section-container {
+        .grid-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1.5fr 1.5fr;
             gap: 20px;
             margin-bottom: 30px;
+        }
+
+        .small-grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
         }
 
         .section {
@@ -105,12 +114,6 @@
 
         .crypto-card p {
             font-size: 1.1em;
-        }
-
-        .info-section {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
         }
 
         .section-content .crypto-details {
@@ -164,165 +167,170 @@
 
 <header>
     <h1>ImparoDeFi</h1>
+    <nav>
+        <button class="nav-btn" onclick="location.href='basi.html'">BASI</button>
+        <button class="nav-btn" onclick="location.href='defi.html'">DEFI</button>
+        <button class="nav-btn" onclick="location.href='nft.html'">NFTs</button>
+        <button class="nav-btn" onclick="location.href='giochi.html'">GIOCHI</button>
+        <button class="nav-btn" onclick="location.href='airdrops.html'">AIRDROPS</button>
+    </nav>
     <div class="action-btns">
         <button class="action-btn">Sign In</button>
         <button class="action-btn">Sign Up</button>
     </div>
 </header>
 
-<nav>
-    <button class="nav-btn" onclick="location.href='basi.html'">BASI</button>
-    <button class="nav-btn" onclick="location.href='defi.html'">DEFI</button>
-    <button class="nav-btn" onclick="location.href='nft.html'">NFTs</button>
-    <button class="nav-btn" onclick="location.href='giochi.html'">GIOCHI</button>
-    <button class="nav-btn" onclick="location.href='airdrops.html'">AIRDROPS</button>
-</nav>
-
 <button class="news-btn">NOTIZIE</button>
 
-<!-- Sezione Comprare e Vendere Crypto -->
-<section class="section">
-    <div class="section-title">Comprare e Vendere Crypto</div>
-    <div class="section-content">
-        <div class="crypto-card">
-            <div>
-                <p>Kraken</p>
-                <img src="kraken.jpg" alt="Logo Kraken">
+<!-- Grid principale -->
+<div class="grid-container">
+    <!-- Sezione Comprare e Vendere Crypto -->
+    <section class="section">
+        <div class="section-title">Comprare e Vendere Crypto</div>
+        <div class="section-content">
+            <div class="crypto-card">
+                <div>
+                    <p>Kraken</p>
+                    <img src="kraken.jpg" alt="Logo Kraken">
+                </div>
+            </div>
+            <div class="crypto-card">
+                <div>
+                    <p>Binance</p>
+                    <img src="binance.jpg" alt="Logo Binance">
+                </div>
+            </div>
+            <div class="crypto-card">
+                <div>
+                    <p>Coinbase</p>
+                    <img src="coinbase.jpg" alt="Logo Coinbase">
+                </div>
+            </div>
+            <div class="crypto-card">
+                <div>
+                    <p>Crypto.com</p>
+                    <img src="crypto.jpg" alt="Logo Crypto.com">
+                </div>
             </div>
         </div>
-        <div class="crypto-card">
-            <div>
-                <p>Binance</p>
-                <img src="binance.jpg" alt="Logo Binance">
-            </div>
-        </div>
-        <div class="crypto-card">
-            <div>
-                <p>Coinbase</p>
-                <img src="coinbase.jpg" alt="Logo Coinbase">
-            </div>
-        </div>
-        <div class="crypto-card">
-            <div>
-                <p>Crypto.com</p>
-                <img src="crypto.jpg" alt="Logo Crypto.com">
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Sezione Blockchain -->
-<section class="section">
-    <div class="section-title">Blockchain</div>
-    <div class="section-content">
-        <div class="crypto-details">
-            <div class="info">
-                <img src="bitcoin.jpg" alt="Logo Bitcoin">
-                <p>Bitcoin</p>
+    <!-- Sezione Blockchain -->
+    <section class="section">
+        <div class="section-title">Blockchain</div>
+        <div class="section-content">
+            <div class="crypto-details">
+                <div class="info">
+                    <img src="bitcoin.jpg" alt="Logo Bitcoin">
+                    <p>Bitcoin</p>
+                </div>
+                <div>
+                    <p>BTC = $44,040.57</p>
+                    <p>Cap. di Mercato: $840B</p>
+                    <p>Anno di Lancio: 2009</p>
+                </div>
             </div>
-            <div>
-                <p>BTC = $44,040.57</p>
-                <p>Cap. di Mercato: $840B</p>
-                <p>Anno di Lancio: 2009</p>
+            <div class="crypto-details">
+                <div class="info">
+                    <img src="ethereum.jpg" alt="Logo Ethereum">
+                    <p>Ethereum</p>
+                </div>
+                <div>
+                    <p>ETH = $2,340.32</p>
+                    <p>Cap. di Mercato: $522B</p>
+                    <p>Anno di Lancio: 2015</p>
+                </div>
+            </div>
+            <div class="crypto-details">
+                <div class="info">
+                    <img src="solana.jpg" alt="Logo Solana">
+                    <p>Solana</p>
+                </div>
+                <div>
+                    <p>SOL = $73.10</p>
+                    <p>Cap. di Mercato: $32B</p>
+                    <p>Anno di Lancio: 2020</p>
+                </div>
+            </div>
+            <div class="crypto-details">
+                <div class="info">
+                    <img src="cosmos.jpg" alt="Logo Cosmos">
+                    <p>Cosmos</p>
+                </div>
+                <div>
+                    <p>ATOM = $10.79</p>
+                    <p>Cap. di Mercato: $3B</p>
+                    <p>Anno di Lancio: 2017</p>
+                </div>
             </div>
         </div>
-        <div class="crypto-details">
-            <div class="info">
-                <img src="ethereum.jpg" alt="Logo Ethereum">
-                <p>Ethereum</p>
-            </div>
-            <div>
-                <p>ETH = $2,340.32</p>
-                <p>Cap. di Mercato: $522B</p>
-                <p>Anno di Lancio: 2015</p>
-            </div>
-        </div>
-        <div class="crypto-details">
-            <div class="info">
-                <img src="solana.jpg" alt="Logo Solana">
-                <p>Solana</p>
-            </div>
-            <div>
-                <p>SOL = $73.10</p>
-                <p>Cap. di Mercato: $32B</p>
-                <p>Anno di Lancio: 2020</p>
-            </div>
-        </div>
-        <div class="crypto-details">
-            <div class="info">
-                <img src="cosmos.jpg" alt="Logo Cosmos">
-                <p>Cosmos</p>
-            </div>
-            <div>
-                <p>ATOM = $10.79</p>
-                <p>Cap. di Mercato: $3B</p>
-                <p>Anno di Lancio: 2017</p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+</div>
 
-<!-- Sezione Portafogli Crypto -->
-<section class="section">
-    <div class="section-title">Portafogli Crypto</div>
-    <div class="section-content">
-        <div class="crypto-card">
-            <div>
-                <p>Metamask</p>
-                <img src="metamask.jpg" alt="Logo Metamask">
+<!-- Sezione più piccola -->
+<div class="small-grid-container">
+    <!-- Sezione Portafogli Crypto -->
+    <section class="section">
+        <div class="section-title">Portafogli Crypto</div>
+        <div class="section-content">
+            <div class="crypto-card">
+                <div>
+                    <p>Metamask</p>
+                    <img src="metamask.jpg" alt="Logo Metamask">
+                </div>
+            </div>
+            <div class="crypto-card">
+                <div>
+                    <p>Rainbow</p>
+                    <img src="rainbow.jpg" alt="Logo Rainbow">
+                </div>
+            </div>
+            <div class="crypto-card">
+                <div>
+                    <p>Rabby</p>
+                    <img src="rabby.jpg" alt="Logo Rabby">
+                </div>
+            </div>
+            <div class="crypto-card">
+                <div>
+                    <p>Coinbase Wallet</p>
+                    <img src="coinbasewallet.jpg" alt="Logo Coinbase Wallet">
+                </div>
             </div>
         </div>
-        <div class="crypto-card">
-            <div>
-                <p>Rainbow</p>
-                <img src="rainbow.jpg" alt="Logo Rainbow">
-            </div>
-        </div>
-        <div class="crypto-card">
-            <div>
-                <p>Rabby</p>
-                <img src="rabby.jpg" alt="Logo Rabby">
-            </div>
-        </div>
-        <div class="crypto-card">
-            <div>
-                <p>Coinbase Wallet</p>
-                <img src="coinbasewallet.jpg" alt="Logo Coinbase Wallet">
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Sezione Carte Crypto -->
-<section class="section">
-    <div class="section-title">Carte Crypto</div>
-    <div class="section-content">
-        <div class="crypto-card">
-            <div>
-                <p>Crypto.com</p>
-                <img src="cryptocard.jpg" alt="Logo Crypto.com">
+    <!-- Sezione Carte Crypto -->
+    <section class="section">
+        <div class="section-title">Carte Crypto</div>
+        <div class="section-content">
+            <div class="crypto-card">
+                <div>
+                    <p>Crypto.com</p>
+                    <img src="cryptocard.jpg" alt="Logo Crypto.com">
+                </div>
+            </div>
+            <div class="crypto-card">
+                <div>
+                    <p>Binance</p>
+                    <img src="binancecard.jpg" alt="Logo Binance">
+                </div>
+            </div>
+            <div class="crypto-card">
+                <div>
+                    <p>Holyheld</p>
+                    <img src="holyheldcard.jpg" alt="Logo Holyheld">
+                </div>
+            </div>
+            <div class="crypto-card">
+                <div>
+                    <p>Coinbase</p>
+                    <img src="coinbasecard.jpg" alt="Logo Coinbase">
+                </div>
             </div>
         </div>
-        <div class="crypto-card">
-            <div>
-                <p>Binance</p>
-                <img src="binancecard.jpg" alt="Logo Binance">
-            </div>
-        </div>
-        <div class="crypto-card">
-            <div>
-                <p>Holyheld</p>
-                <img src="holyheldcard.jpg" alt="Logo Holyheld">
-            </div>
-        </div>
-        <div class="crypto-card">
-            <div>
-                <p>Coinbase</p>
-                <img src="coinbasecard.jpg" alt="Logo Coinbase">
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+</div>
 
 <footer>
     &copy; 2024 ImparoDeFi. Tutti i diritti riservati.
