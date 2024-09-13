@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ImparoDeFi - Landing</title>
+    <link rel="icon" href="favicon.png" type="image/png"> <!-- Aggiunta del favicon -->
     <style>
         /* Impostazioni di base */
         * {
@@ -94,26 +95,27 @@
             background-color: #e5f4f9;
             border-radius: 10px;
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-            height: auto; /* Fa in modo che l'altezza dei due blocchi sia uguale */
+            height: auto;
         }
 
         .text-box p {
             font-size: 1.2em;
             line-height: 1.6;
-            text-align: justify;
+            margin: 0; /* Elimina margini extra */
+            text-align: justify; /* Allinea il testo in modo più uniforme */
         }
 
         /* Sezione Video */
         .video-box {
             position: relative;
             width: 45%;
-            height: auto;
+            height: 100%; /* Fa in modo che l'altezza sia la stessa del blocco di testo */
         }
 
         .video {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Adatta l'immagine all'interno del blocco */
             border-radius: 10px;
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
         }
