@@ -1,0 +1,130 @@
+/* Impostazioni di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #c3e0e5, #e1f5f4);
+    color: #000;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #002752;
+    color: white;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.buttons {
+    display: flex;
+}
+
+button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.btn-accedi {
+    background-color: #cce5ff;
+    color: #333;
+}
+
+.btn-iscriviti {
+    background-color: #b3d1ff;
+    color: #333;
+}
+
+/* Navigazione */
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.nav-btn {
+    padding: 15px 25px;
+    margin: 0 10px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.arrow-btn {
+    font-size: 1.5em;
+}
+
+/* Sezione principale */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.text-box {
+    width: 45%;
+    padding: 20px;
+    background-color: #e5f4f9;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-box p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.scroll-down {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.scroll-down .arrow {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+/* Sezione Video */
+.video-box {
+    position: relative;
+    width: 45%;
+}
+
+.video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 20px;
+    cursor: pointer;
+}
