@@ -76,8 +76,8 @@
             cursor: pointer;
         }
 
-        .arrow-btn {
-            font-size: 1.5em;
+        .nav-btn:hover {
+            background-color: #004a99;
         }
 
         /* Sezione principale */
@@ -166,12 +166,11 @@
     </header>
 
     <nav class="navigation">
-        <button class="nav-btn">BASI</button>
-        <button class="nav-btn">DEFI</button>
-        <button class="nav-btn">NFT</button>
-        <button class="nav-btn">GIOCHI</button>
-        <button class="nav-btn">AIRDROPS</button>
-        <button class="nav-btn arrow-btn">→</button>
+        <button class="nav-btn" onclick="location.href='basi.html'">BASI</button>
+        <button class="nav-btn" onclick="location.href='defi.html'">DEFI</button>
+        <button class="nav-btn" onclick="location.href='nft.html'">NFT</button>
+        <button class="nav-btn" onclick="location.href='giochi.html'">GIOCHI</button>
+        <button class="nav-btn" onclick="location.href='airdrops.html'">AIRDROPS</button>
     </nav>
 
     <section class="main-content">
@@ -182,12 +181,10 @@
                 ImparoDeFi è stata costruita dai migliori esperti del settore per aiutarti a navigare questo nuovo mondo pieno di opportunità.
             </p>
         </div>
-       <div class="video-box">
-    <video controls class="video">
-        <source src="video-file.mp4" type="video/mp4">
-        Il tuo browser non supporta la visualizzazione dei video.
-    </video>
-</div>
+        <div class="video-box">
+            <img src="video-placeholder.jpg" alt="Video Immagine" class="video">
+            <div class="play-button">▶</div>
+        </div>
     </section>
 
     <footer></footer>
