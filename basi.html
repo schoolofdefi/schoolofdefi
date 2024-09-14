@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImparoDeFi - Basi</title>
+    <title>ImparoDeFi - Landing</title>
+    <link rel="icon" href="favicon.png" type="image/png"> <!-- Aggiunta del favicon -->
     <style>
+        /* Impostazioni di base */
         * {
             margin: 0;
             padding: 0;
@@ -13,410 +15,179 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #e0e7ff;
+            background: linear-gradient(to bottom, #c3e0e5, #e1f5f4);
             color: #000;
+            text-align: center;
             padding: 0;
-            overflow-x: hidden; /* Blocca lo scrolling laterale */
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
 
+        /* Header */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 40px;
-            background-color: #001f3f;
+            padding: 20px 50px;
+            background-color: #002752;
             color: white;
             width: 100%;
-            height: 50px; /* Header più sottile */
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000; /* Mantiene l'header in primo piano */
         }
 
-        nav {
+        h1 {
+            font-size: 2em;
+        }
+
+        .buttons {
+            display: flex;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+        }
+
+        .btn-accedi {
+            background-color: #cce5ff;
+            color: #333;
+        }
+
+        .btn-iscriviti {
+            background-color: #b3d1ff;
+            color: #333;
+        }
+
+        /* Navigazione */
+        .navigation {
             display: flex;
             justify-content: center;
-            margin-bottom: 0px;
-            flex-grow: 1;
+            margin: 30px 0;
         }
 
         .nav-btn {
-            padding: 8px 15px;
+            padding: 15px 25px;
             margin: 0 10px;
-            background-color: #003366;
+            background-color: #0066cc;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 1.2em;
         }
 
         .nav-btn:hover {
-            background-color: #001f3f;
+            background-color: #004a99;
         }
 
-        .action-btns {
-            display: flex;
-            gap: 10px;
-        }
-
-        .action-btn {
-            padding: 8px 15px;
-            background-color: #002752;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        /* Pulsante NOTIZIE */
-        .news-btn {
-            background-color: #002752;
-            border: none;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            position: fixed; /* Pulsante fisso */
-            right: 40px; /* Distanza uguale dal bordo come i pulsanti a sinistra */
-            top: 60px;
-            z-index: 1000;
-        }
-
-        /* Pulsanti Informazione e Filtri */
-        .info-btn, .filter-btn {
-            background-color: #003366;
-            border: none;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-
-        /* Sezione dei pulsanti "i" e "Filtri" */
-        .top-section {
-            display: flex;
-            justify-content: space-between; /* Distribuisce i pulsanti sui lati */
-            align-items: center;
-            padding: 20px 40px;
-            background-color: #f5f9ff;
-            margin-top: 50px; /* Spazio per l'header fisso */
-        }
-
-        /* Menu a tendina per Filtri */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f1f1f1;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Griglia principale */
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1.5fr 1.5fr;
-            gap: 20px;
-            padding: 20px;
-            flex-grow: 1; /* Forza la griglia a espandersi */
-        }
-
-        .small-grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 30px;
-            padding: 20px;
-        }
-
-        .section {
-            background-color: #f5f9ff;
-            border: 2px solid #d1d9e6;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .section-title {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .section-content {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        }
-
-        .crypto-card {
-            background-color: white;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 10px;
+        /* Sezione principale */
+        .main-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin: 40px auto;
+            max-width: 1200px;
         }
 
-        .crypto-card img {
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
-        }
-
-        .crypto-card p {
-            font-size: 1.1em;
-        }
-
-        /* Sezione Blockchain corretta */
-        .crypto-details {
-            background-color: white;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 15px;
-            text-align: left; /* Nome chain sopra i dati */
-        }
-
-        .crypto-details img {
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
-        }
-
-        .crypto-details p {
-            margin: 5px 0;
-            font-size: 1.1em;
-        }
-
-        footer {
-            background-color: #002752;
-            color: white;
-            text-align: center;
+        .text-box, .video-box {
+            width: 45%;
             padding: 20px;
-            margin-top: auto;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            background-color: #e5f4f9;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+            height: auto;
         }
 
+        .text-box p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 0; /* Elimina margini extra */
+            text-align: justify; /* Allinea il testo in modo più uniforme */
+        }
+
+        /* Sezione Video */
+        .video-box {
+            position: relative;
+            width: 45%;
+            height: 100%; /* Fa in modo che l'altezza sia la stessa del blocco di testo */
+        }
+
+        .video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Adatta l'immagine all'interno del blocco */
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5em;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        /* Contenimento del layout inferiore */
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .main-content {
+            margin: 40px auto;
+            max-width: 1200px;
+            flex-grow: 1;
+        }
+
+        /* Regola lo sfondo celeste in basso */
+        footer {
+            background-color: #e1f5f4;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <h1>ImparoDeFi</h1>
+        <div class="buttons">
+            <button class="btn-accedi">ACCEDI</button>
+            <button class="btn-iscriviti">ISCRIVITI GRATUITAMENTE</button>
+        </div>
+    </header>
 
-<header>
-    <h1>ImparoDeFi</h1>
-    <nav>
+    <nav class="navigation">
         <button class="nav-btn" onclick="location.href='basi.html'">BASI</button>
         <button class="nav-btn" onclick="location.href='defi.html'">DEFI</button>
-        <button class="nav-btn" onclick="location.href='nft.html'">NFTs</button>
+        <button class="nav-btn" onclick="location.href='nft.html'">NFT</button>
         <button class="nav-btn" onclick="location.href='giochi.html'">GIOCHI</button>
         <button class="nav-btn" onclick="location.href='airdrops.html'">AIRDROPS</button>
+        <button class="nav-btn" onclick="location.href='tienitiaggiornato.html'">TIENITI AGGIORNATO</button>
     </nav>
-    <div class="action-btns">
-        <button class="action-btn">Sign In</button>
-        <button class="action-btn">Sign Up</button>
-    </div>
-</header>
 
-<!-- Sezione pulsanti Informazione e Filtri -->
-<div class="top-section">
-    <div class="left-buttons">
-        <button class="info-btn">i</button>
-        <div class="dropdown">
-            <button class="filter-btn">FILTRI</button>
-            <div class="dropdown-content">
-                <a href="#">Opzione 1</a>
-                <a href="#">Opzione 2</a>
-                <a href="#">Opzione 3</a>
-            </div>
+    <section class="main-content">
+        <div class="text-box">
+            <p>
+                Blockchains, Finanza Decentralizzata (DeFi), NFTs, memecoins, metaversi.
+                Tutto questo è Web3. Le opportunità sono infinite, ma purtroppo anche le trappole.
+                ImparoDeFi è stata costruita dai migliori esperti del settore per aiutarti a navigare questo nuovo mondo pieno di opportunità.
+            </p>
         </div>
-    </div>
-    <button class="news-btn">NOTIZIE</button> <!-- Pulsante allineato alla destra -->
-</div>
-
-<!-- Grid principale -->
-<div class="grid-container">
-    <!-- Sezione Comprare e Vendere Crypto -->
-    <section class="section">
-        <div class="section-title">Comprare e Vendere Crypto</div>
-        <div class="section-content">
-            <div class="crypto-card">
-                <div>
-                    <p>Kraken</p>
-                    <img src="kraken.png" alt="Logo Kraken">
-                    <p>Descrizione: Kraken è una piattaforma centralizzata di scambio di criptovalute.</p>
-                </div>
-            </div>
-            <div class="crypto-card">
-                <div>
-                    <p>Binance</p>
-                    <img src="binance.png" alt="Logo Binance">
-                    <p>Descrizione: Binance è uno degli exchange più grandi per volume di scambio.</p>
-                </div>
-            </div>
-            <div class="crypto-card">
-                <div>
-                    <p>Coinbase</p>
-                    <img src="coinbase.png" alt="Logo Coinbase">
-                    <p>Descrizione: Coinbase è stato fondato nel 2012 ed è popolare tra i principianti.</p>
-                </div>
-            </div>
-            <div class="crypto-card">
-                <div>
-                    <p>Crypto.com</p>
-                    <img src="crypto.png" alt="Logo Crypto.com">
-                    <p>Descrizione: Crypto.com offre una vasta gamma di servizi legati alle criptovalute.</p>
-                </div>
-            </div>
-            <div class="crypto-card">
-                <div>
-                    <p>Young Platform</p>
-                    <img src="youngplatform.png" alt="Logo Young Platform">
-                    <p>Descrizione: Una piattaforma italiana per l’acquisto di criptovalute.</p>
-                </div>
-            </div>
-            <div class="crypto-card">
-                <div>
-                    <p>Transak</p>
-                    <img src="transak.png" alt="Logo Transak">
-                    <p>Descrizione: Transak fornisce API per il trading di criptovalute.</p>
-                </div>
-            </div>
+        <div class="video-box">
+            <img src="video-placeholder.jpg" alt="Video Immagine" class="video">
+            <div class="play-button">▶</div>
         </div>
     </section>
 
-    <!-- Sezione Blockchain -->
-    <section class="section">
-        <div class="section-title">Blockchain</div>
-        <div class="section-content">
-            <div class="crypto-details">
-                <p>Bitcoin</p>
-                <img src="bitcoin.png" alt="Logo Bitcoin">
-                <p>BTC = $44,040.57</p>
-                <p>Cap. di Mercato: $840B</p>
-                <p>Anno di Lancio: 2009</p>
-            </div>
-            <div class="crypto-details">
-                <p>Ethereum</p>
-                <img src="ethereum.png" alt="Logo Ethereum">
-                <p>ETH = $2,340.32</p>
-                <p>Cap. di Mercato: $522B</p>
-                <p>Anno di Lancio: 2015</p>
-            </div>
-            <div class="crypto-details">
-                <p>Solana</p>
-                <img src="solana.png" alt="Logo Solana">
-                <p>SOL = $73.10</p>
-                <p>Cap. di Mercato: $32B</p>
-                <p>Anno di Lancio: 2020</p>
-            </div>
-            <div class="crypto-details">
-                <p>Cosmos</p>
-                <img src="cosmos.png" alt="Logo Cosmos">
-                <p>ATOM = $10.79</p>
-                <p>Cap. di Mercato: $3B</p>
-                <p>Anno di Lancio: 2017</p>
-            </div>
-        </div>
-    </section>
-</div>
-
-<!-- Sezione più piccola -->
-<div class="small-grid-container">
-    <!-- Sezione Portafogli Crypto -->
-    <section class="section">
-        <div class="section-title">Portafogli Crypto</div>
-        <div class="section-content">
-            <div class="crypto-card">
-                <div>
-                    <p>Metamask</p>
-                    <img src="metamask.png" alt="Logo Metamask">
-                </div>
-            </div>
-            <div class="crypto-card">
-                <div>
-                    <p>Rainbow</p>
-                    <img src="rainbow.png" alt="Logo Rainbow">
-                </div>
-            </div>
-            <div class="crypto-card">
-                <div>
-                    <p>Rabby</p>
-                    <img src="rabby.png" alt="Logo Rabby">
-                </div>
-            </div>
-            <div class="crypto-card">
-                <div>
-                    <p>Coinbase Wallet</p>
-                    <img src="coinbasewallet.png" alt="Logo Coinbase Wallet">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sezione Carte Crypto -->
-    <section class="section">
-        <div class="section-title">Carte Crypto</div>
-        <div class="section-content">
-            <div class="crypto-card">
-                <div>
-                    <p>Crypto.com</p>
-                    <img src="cryptocard.png" alt="Logo Crypto.com">
-                </div>
-            </div>
-            <div class="crypto-card">
-                <div>
-                    <p>Binance</p>
-                    <img src="binancecard.png" alt="Logo Binance">
-                </div>
-            </div>
-            <div class="crypto-card">
-                <div>
-                    <p>Holyheld</p>
-                    <img src="holyheldcard.png" alt="Logo Holyheld">
-                </div>
-            </div>
-            <div class="crypto-card">
-                <div>
-                    <p>Coinbase</p>
-                    <img src="coinbasecard.png" alt="Logo Coinbase">
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-
-<footer>
-    &copy; 2024 ImparoDeFi. Tutti i diritti riservati.
-</footer>
-
+    <footer></footer>
 </body>
 </html>
