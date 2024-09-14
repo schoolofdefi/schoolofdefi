@@ -84,7 +84,8 @@
             cursor: pointer;
             position: fixed; /* Pulsante fisso */
             right: 10px;
-            top: 60px; /* Sempre visibile, sopra il contenuto */
+            top: 60px;
+            z-index: 1000; /* Sempre visibile, fisso in alto */
         }
 
         /* Pulsanti Informazione e Filtri */
@@ -136,6 +137,12 @@
             padding: 20px 40px;
             background-color: #f5f9ff;
             margin-top: 50px; /* Spazio per l'header fisso */
+        }
+
+        /* Allinea i pulsanti Informazione e Filtri con Notizie */
+        .top-section, .news-btn {
+            display: flex;
+            align-items: center;
         }
 
         /* Griglia principale */
@@ -218,6 +225,10 @@
             text-align: center;
             padding: 20px;
             margin-top: auto; /* Footer fisso in fondo alla pagina */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
         }
 
     </style>
@@ -250,9 +261,8 @@
             <a href="#">Opzione 3</a>
         </div>
     </div>
+    <button class="news-btn">NOTIZIE</button> <!-- Button allineato con gli altri -->
 </div>
-
-<button class="news-btn">NOTIZIE</button> <!-- Button fisso -->
 
 <!-- Grid principale -->
 <div class="grid-container">
