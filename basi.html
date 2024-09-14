@@ -71,6 +71,7 @@
             cursor: pointer;
         }
 
+        /* Pulsante NOTIZIE */
         .news-btn {
             background-color: #002752;
             border: none;
@@ -85,6 +86,48 @@
             top: 60px; /* Posizionato sotto i pulsanti di "Sign In" e "Sign Up" */
         }
 
+        /* Pulsanti Informazione e Filtri */
+        .info-btn, .filter-btn {
+            background-color: #003366;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        /* Menu a tendina per Filtri */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Griglia principale */
         .grid-container {
             display: grid;
             grid-template-columns: 1.5fr 1.5fr;
@@ -139,39 +182,23 @@
             font-size: 1.1em;
         }
 
-        .section-content .crypto-details {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid #ccc;
-            padding: 15px;
-            border-radius: 8px;
+        /* Sezione Blockchain corretta */
+        .crypto-details {
             background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: left; /* Nome chain sopra i dati */
         }
 
-        .crypto-details .info {
-            display: flex;
-            align-items: center;
-        }
-
-        .crypto-details .info img {
-            margin-right: 10px;
-            width: 30px;
-            height: 30px;
+        .crypto-details img {
+            width: 40px;
+            height: 40px;
         }
 
         .crypto-details p {
-            margin: 0;
+            margin: 5px 0;
             font-size: 1.1em;
-            color: #333;
-            font-weight: bold;
-        }
-
-        .crypto-details .info p {
-            font-size: 1.1em;
-            margin-left: 5px;
-            color: #000;
-            font-weight: bold;
         }
 
         footer {
@@ -189,6 +216,17 @@
 
 <header>
     <h1>ImparoDeFi</h1>
+    <div>
+        <button class="info-btn">i</button> <!-- Pulsante Informazione -->
+        <div class="dropdown">
+            <button class="filter-btn">FILTRI</button> <!-- Pulsante Filtri con menu a tendina -->
+            <div class="dropdown-content">
+                <a href="#">Opzione 1</a>
+                <a href="#">Opzione 2</a>
+                <a href="#">Opzione 3</a>
+            </div>
+        </div>
+    </div>
     <nav>
         <button class="nav-btn" onclick="location.href='basi.html'">BASI</button>
         <button class="nav-btn" onclick="location.href='defi.html'">DEFI</button>
@@ -212,42 +250,42 @@
             <div class="crypto-card">
                 <div>
                     <p>Kraken</p>
-                    <img src="kraken.jpg" alt="Logo Kraken">
+                    <img src="kraken.png" alt="Logo Kraken">
                     <p>Descrizione: Kraken è una piattaforma centralizzata di scambio di criptovalute.</p>
                 </div>
             </div>
             <div class="crypto-card">
                 <div>
                     <p>Binance</p>
-                    <img src="binance.jpg" alt="Logo Binance">
+                    <img src="binance.png" alt="Logo Binance">
                     <p>Descrizione: Binance è uno degli exchange più grandi per volume di scambio.</p>
                 </div>
             </div>
             <div class="crypto-card">
                 <div>
                     <p>Coinbase</p>
-                    <img src="coinbase.jpg" alt="Logo Coinbase">
+                    <img src="coinbase.png" alt="Logo Coinbase">
                     <p>Descrizione: Coinbase è stato fondato nel 2012 ed è popolare tra i principianti.</p>
                 </div>
             </div>
             <div class="crypto-card">
                 <div>
                     <p>Crypto.com</p>
-                    <img src="crypto.jpg" alt="Logo Crypto.com">
+                    <img src="crypto.png" alt="Logo Crypto.com">
                     <p>Descrizione: Crypto.com offre una vasta gamma di servizi legati alle criptovalute.</p>
                 </div>
             </div>
             <div class="crypto-card">
                 <div>
                     <p>Young Platform</p>
-                    <img src="youngplatform.jpg" alt="Logo Young Platform">
+                    <img src="youngplatform.png" alt="Logo Young Platform">
                     <p>Descrizione: Una piattaforma italiana per l’acquisto di criptovalute.</p>
                 </div>
             </div>
             <div class="crypto-card">
                 <div>
                     <p>Transak</p>
-                    <img src="transak.jpg" alt="Logo Transak">
+                    <img src="transak.png" alt="Logo Transak">
                     <p>Descrizione: Transak fornisce API per il trading di criptovalute.</p>
                 </div>
             </div>
@@ -259,48 +297,32 @@
         <div class="section-title">Blockchain</div>
         <div class="section-content">
             <div class="crypto-details">
-                <div class="info">
-                    <img src="bitcoin.jpg" alt="Logo Bitcoin">
-                    <p>Bitcoin</p>
-                </div>
-                <div>
-                    <p>BTC = $44,040.57</p>
-                    <p>Cap. di Mercato: $840B</p>
-                    <p>Anno di Lancio: 2009</p>
-                </div>
+                <p>Bitcoin</p>
+                <img src="bitcoin.png" alt="Logo Bitcoin">
+                <p>BTC = $44,040.57</p>
+                <p>Cap. di Mercato: $840B</p>
+                <p>Anno di Lancio: 2009</p>
             </div>
             <div class="crypto-details">
-                <div class="info">
-                    <img src="ethereum.jpg" alt="Logo Ethereum">
-                    <p>Ethereum</p>
-                </div>
-                <div>
-                    <p>ETH = $2,340.32</p>
-                    <p>Cap. di Mercato: $522B</p>
-                    <p>Anno di Lancio: 2015</p>
-                </div>
+                <p>Ethereum</p>
+                <img src="ethereum.png" alt="Logo Ethereum">
+                <p>ETH = $2,340.32</p>
+                <p>Cap. di Mercato: $522B</p>
+                <p>Anno di Lancio: 2015</p>
             </div>
             <div class="crypto-details">
-                <div class="info">
-                    <img src="solana.jpg" alt="Logo Solana">
-                    <p>Solana</p>
-                </div>
-                <div>
-                    <p>SOL = $73.10</p>
-                    <p>Cap. di Mercato: $32B</p>
-                    <p>Anno di Lancio: 2020</p>
-                </div>
+                <p>Solana</p>
+                <img src="solana.png" alt="Logo Solana">
+                <p>SOL = $73.10</p>
+                <p>Cap. di Mercato: $32B</p>
+                <p>Anno di Lancio: 2020</p>
             </div>
             <div class="crypto-details">
-                <div class="info">
-                    <img src="cosmos.jpg" alt="Logo Cosmos">
-                    <p>Cosmos</p>
-                </div>
-                <div>
-                    <p>ATOM = $10.79</p>
-                    <p>Cap. di Mercato: $3B</p>
-                    <p>Anno di Lancio: 2017</p>
-                </div>
+                <p>Cosmos</p>
+                <img src="cosmos.png" alt="Logo Cosmos">
+                <p>ATOM = $10.79</p>
+                <p>Cap. di Mercato: $3B</p>
+                <p>Anno di Lancio: 2017</p>
             </div>
         </div>
     </section>
@@ -315,25 +337,25 @@
             <div class="crypto-card">
                 <div>
                     <p>Metamask</p>
-                    <img src="metamask.jpg" alt="Logo Metamask">
+                    <img src="metamask.png" alt="Logo Metamask">
                 </div>
             </div>
             <div class="crypto-card">
                 <div>
                     <p>Rainbow</p>
-                    <img src="rainbow.jpg" alt="Logo Rainbow">
+                    <img src="rainbow.png" alt="Logo Rainbow">
                 </div>
             </div>
             <div class="crypto-card">
                 <div>
                     <p>Rabby</p>
-                    <img src="rabby.jpg" alt="Logo Rabby">
+                    <img src="rabby.png" alt="Logo Rabby">
                 </div>
             </div>
             <div class="crypto-card">
                 <div>
                     <p>Coinbase Wallet</p>
-                    <img src="coinbasewallet.jpg" alt="Logo Coinbase Wallet">
+                    <img src="coinbasewallet.png" alt="Logo Coinbase Wallet">
                 </div>
             </div>
         </div>
@@ -346,25 +368,25 @@
             <div class="crypto-card">
                 <div>
                     <p>Crypto.com</p>
-                    <img src="cryptocard.jpg" alt="Logo Crypto.com">
+                    <img src="cryptocard.png" alt="Logo Crypto.com">
                 </div>
             </div>
             <div class="crypto-card">
                 <div>
                     <p>Binance</p>
-                    <img src="binancecard.jpg" alt="Logo Binance">
+                    <img src="binancecard.png" alt="Logo Binance">
                 </div>
             </div>
             <div class="crypto-card">
                 <div>
                     <p>Holyheld</p>
-                    <img src="holyheldcard.jpg" alt="Logo Holyheld">
+                    <img src="holyheldcard.png" alt="Logo Holyheld">
                 </div>
             </div>
             <div class="crypto-card">
                 <div>
                     <p>Coinbase</p>
-                    <img src="coinbasecard.jpg" alt="Logo Coinbase">
+                    <img src="coinbasecard.png" alt="Logo Coinbase">
                 </div>
             </div>
         </div>
