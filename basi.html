@@ -83,9 +83,8 @@
             border-radius: 5px;
             cursor: pointer;
             position: fixed; /* Pulsante fisso */
-            right: 40px; /* Distanza uguale dal bordo come i pulsanti a sinistra */
-            top: 60px;
-            z-index: 1000;
+            right: 10px;
+            top: 60px; /* Sempre visibile, sopra il contenuto */
         }
 
         /* Pulsanti Informazione e Filtri */
@@ -97,16 +96,6 @@
             border-radius: 5px;
             cursor: pointer;
             margin-right: 10px;
-        }
-
-        /* Sezione dei pulsanti "i" e "Filtri" */
-        .top-section {
-            display: flex;
-            justify-content: space-between; /* Distribuisce i pulsanti sui lati */
-            align-items: center;
-            padding: 20px 40px;
-            background-color: #f5f9ff;
-            margin-top: 50px; /* Spazio per l'header fisso */
         }
 
         /* Menu a tendina per Filtri */
@@ -137,6 +126,16 @@
 
         .dropdown:hover .dropdown-content {
             display: block;
+        }
+
+        /* Sezione dei pulsanti "i" e "Filtri" */
+        .top-section {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #f5f9ff;
+            margin-top: 50px; /* Spazio per l'header fisso */
         }
 
         /* Griglia principale */
@@ -188,7 +187,6 @@
         .crypto-card img {
             width: 40px;
             height: 40px;
-            object-fit: contain;
         }
 
         .crypto-card p {
@@ -207,7 +205,6 @@
         .crypto-details img {
             width: 40px;
             height: 40px;
-            object-fit: contain;
         }
 
         .crypto-details p {
@@ -220,11 +217,7 @@
             color: white;
             text-align: center;
             padding: 20px;
-            margin-top: auto;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            margin-top: auto; /* Footer fisso in fondo alla pagina */
         }
 
     </style>
@@ -248,19 +241,18 @@
 
 <!-- Sezione pulsanti Informazione e Filtri -->
 <div class="top-section">
-    <div class="left-buttons">
-        <button class="info-btn">i</button>
-        <div class="dropdown">
-            <button class="filter-btn">FILTRI</button>
-            <div class="dropdown-content">
-                <a href="#">Opzione 1</a>
-                <a href="#">Opzione 2</a>
-                <a href="#">Opzione 3</a>
-            </div>
+    <button class="info-btn">i</button> <!-- Pulsante Informazione -->
+    <div class="dropdown">
+        <button class="filter-btn">FILTRI</button> <!-- Pulsante Filtri con menu a tendina -->
+        <div class="dropdown-content">
+            <a href="#">Opzione 1</a>
+            <a href="#">Opzione 2</a>
+            <a href="#">Opzione 3</a>
         </div>
     </div>
-    <button class="news-btn">NOTIZIE</button> <!-- Pulsante allineato alla destra -->
 </div>
+
+<button class="news-btn">NOTIZIE</button> <!-- Button fisso -->
 
 <!-- Grid principale -->
 <div class="grid-container">
