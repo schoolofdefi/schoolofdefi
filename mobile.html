@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ImparoDeFi - Landing</title>
-    <link rel="icon" href="favicon.png" type="image/png"> <!-- Aggiunta del favicon -->
+    <link rel="icon" href="favicon.png" type="image/png">
     <style>
         /* Impostazioni di base */
         * {
@@ -17,11 +17,9 @@
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom, #c3e0e5, #e1f5f4);
             color: #000;
-            text-align: center;
             padding: 0;
         }
 
-        /* Header */
         header {
             display: flex;
             justify-content: space-between;
@@ -29,95 +27,82 @@
             padding: 20px 50px;
             background-color: #002752;
             color: white;
-            width: 100%;
         }
 
-        h1 {
+        header h1 {
             font-size: 2em;
         }
 
-        .buttons {
-            display: flex;
-            justify-content: center; /* Centra i pulsanti */
-        }
-
-        button {
-            padding: 10px 20px;
-            margin-left: 10px;
-            border: none;
+        /* Menu hamburger */
+        .menu-icon {
+            font-size: 2em;
             cursor: pointer;
-            font-size: 1em;
-            border-radius: 5px;
-        }
-
-        .btn-accedi {
-            background-color: #cce5ff;
-            color: #333;
-        }
-
-        .btn-iscriviti {
-            background-color: #b3d1ff;
-            color: #333;
-        }
-
-        /* Navigazione */
-        .navigation {
             display: flex;
             justify-content: center;
-            margin: 30px 0;
-            flex-wrap: wrap; /* Consente la disposizione su più righe se lo spazio è ridotto */
+            align-items: center;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #004a99;
+            color: white;
         }
 
-        .nav-btn {
-            padding: 15px 25px;
-            margin: 0 10px;
+        /* Navigazione nascosta (tendina) */
+        .nav-menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px; /* Posizionato sotto l'header */
+            right: 20px;
             background-color: #0066cc;
-            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        .nav-menu button {
+            background-color: white;
+            color: #0066cc;
             border: none;
+            padding: 10px 15px;
+            margin: 5px 0;
             border-radius: 5px;
             cursor: pointer;
+            text-align: left;
         }
 
-        .nav-btn:hover {
+        .nav-menu button:hover {
             background-color: #004a99;
+            color: white;
+        }
+
+        /* Mostra il menu quando cliccato */
+        .show {
+            display: flex;
         }
 
         /* Sezione principale */
         .main-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 40px auto;
-            max-width: 1200px;
+            padding: 50px 20px;
+            text-align: center;
         }
 
-        .text-box, .video-box {
-            width: 45%;
-            padding: 20px;
-            background-color: #e5f4f9;
-            border-radius: 10px;
-            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-            height: auto;
-        }
-
-        .text-box p {
+        .main-content p {
             font-size: 1.2em;
             line-height: 1.6;
-            margin: 0;
-            text-align: justify;
+            margin: 0 0 20px 0;
+            color: #002752;
         }
 
-        /* Sezione Video */
         .video-box {
             position: relative;
-            width: 45%;
-            height: 100%;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
         }
 
         .video {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
             border-radius: 10px;
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
         }
@@ -135,108 +120,74 @@
             cursor: pointer;
         }
 
-        /* Contenimento del layout inferiore */
-        body {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .main-content {
-            margin: 40px auto;
-            max-width: 1200px;
-            flex-grow: 1;
-        }
-
         footer {
             background-color: #e1f5f4;
             padding: 20px;
-            width: 100%;
-            box-sizing: border-box;
+            text-align: center;
         }
 
         /* Media Queries per dispositivi mobili */
         @media (max-width: 768px) {
             header {
-                flex-direction: column;
-                padding: 10px 20px;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
             }
 
-            h1 {
+            header h1 {
                 font-size: 1.5em;
             }
 
-            .buttons {
-                margin-top: 10px;
-                flex-direction: column;
+            .main-content p {
+                font-size: 1.1em;
             }
 
-            button {
-                margin: 5px 0;
-                width: 100%;
-            }
-
-            .navigation {
-                flex-direction: column;
-                margin: 20px 0;
-            }
-
-            .nav-btn {
-                margin: 10px 0;
+            .nav-menu {
                 width: 90%;
-            }
-
-            .main-content {
-                flex-direction: column;
-                margin: 20px auto;
-                width: 90%;
-            }
-
-            .text-box, .video-box {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-
-            .text-box p {
-                font-size: 1em;
+                right: 5%;
             }
         }
     </style>
 </head>
 <body>
+
     <header>
         <h1>ImparoDeFi</h1>
-        <div class="buttons">
-            <button class="btn-accedi">ACCEDI</button>
-            <button class="btn-iscriviti">ISCRIVITI GRATUITAMENTE</button>
-        </div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
     </header>
 
-    <nav class="navigation">
-        <button class="nav-btn" onclick="location.href='basi.html'">BASI</button>
-        <button class="nav-btn" onclick="location.href='defi.html'">DEFI</button>
-        <button class="nav-btn" onclick="location.href='nft.html'">NFT</button>
-        <button class="nav-btn" onclick="location.href='giochi.html'">GIOCHI</button>
-        <button class="nav-btn" onclick="location.href='airdrops.html'">AIRDROPS</button>
-        <button class="nav-btn" onclick="location.href='tienitiaggiornato.html'">TIENITI AGGIORNATO</button>
+    <!-- Menu a tendina nascosto -->
+    <nav class="nav-menu" id="nav-menu">
+        <button onclick="location.href='basi.html'">BASI</button>
+        <button onclick="location.href='defi.html'">DEFI</button>
+        <button onclick="location.href='nft.html'">NFT</button>
+        <button onclick="location.href='giochi.html'">GIOCHI</button>
+        <button onclick="location.href='airdrops.html'">AIRDROPS</button>
+        <button onclick="location.href='tienitiaggiornato.html'">TIENITI AGGIORNATO</button>
     </nav>
 
     <section class="main-content">
-        <div class="text-box">
-            <p>
-                Blockchains, Finanza Decentralizzata (DeFi), NFTs, memecoins, metaversi.
-                Tutto questo è Web3. Le opportunità sono infinite, ma purtroppo anche le trappole.
-                ImparoDeFi è stata costruita dai migliori esperti del settore per aiutarti a navigare questo nuovo mondo pieno di opportunità.
-            </p>
-        </div>
+        <p>
+            Blockchains, Finanza Decentralizzata (DeFi), NFTs, memecoins, metaversi.
+            Tutto questo è Web3. Le opportunità sono infinite, ma purtroppo anche le trappole.
+            ImparoDeFi è stata costruita dai migliori esperti del settore per aiutarti a navigare questo nuovo mondo pieno di opportunità.
+        </p>
         <div class="video-box">
             <img src="video-placeholder.jpg" alt="Video Immagine" class="video">
             <div class="play-button">▶</div>
         </div>
     </section>
 
-    <footer></footer>
+    <footer>
+        ImparoDeFi © 2024. All rights reserved.
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("nav-menu");
+            menu.classList.toggle("show");
+        }
+    </script>
+
 </body>
 </html>
-
