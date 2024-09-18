@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImparoDeFi - Selezione</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        /* Impostazioni di base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #c3e0e5, #e1f5f4);
+            color: #000;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #002752;
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2em;
+        }
+
+        /* Pulsanti per la selezione */
+        .button-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .select-btn {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            width: 100%;
+            margin: 10px;
+        }
+
+        .select-btn:hover {
+            background-color: #004a99;
+        }
+
+        /* Regole per dispositivi mobili */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            .button-container {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .select-btn {
+                margin: 10px 0;
+                padding: 15px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ImparoDeFi</h1>
+    </header>
+
+    <div class="button-container">
+        <button class="select-btn" onclick="location.href='desktop.html'">DESKTOP</button>
+        <button class="select-btn" onclick="location.href='webapp.html'">WEBAPP</button>
+    </div>
+</body>
+</html>
