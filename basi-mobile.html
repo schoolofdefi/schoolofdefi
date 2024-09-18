@@ -77,17 +77,32 @@
             color: #333;
         }
 
-        .card button {
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        .button-container button {
             padding: 10px;
             border: none;
             background-color: #0066cc;
             color: white;
             border-radius: 5px;
             cursor: pointer;
+            width: 45%;
         }
 
-        .card button:hover {
+        .button-container button:hover {
             background-color: #004a99;
+        }
+
+        .button-container .twitter-btn {
+            background-color: #e63946;
+        }
+
+        .button-container .twitter-btn:hover {
+            background-color: #c92c2c;
         }
 
         footer {
@@ -120,12 +135,18 @@
             <div class="card">
                 <img src="kraken.png" alt="Kraken">
                 <p>Kraken</p>
-                <button>Website</button>
+                <div class="button-container">
+                    <button onclick="window.location.href='https://kraken.com'">Website</button>
+                    <button class="twitter-btn" onclick="window.location.href='https://twitter.com/krakenfx'">X</button>
+                </div>
             </div>
             <div class="card">
                 <img src="coinbase.png" alt="Coinbase">
                 <p>Coinbase</p>
-                <button>Website</button>
+                <div class="button-container">
+                    <button onclick="window.location.href='https://coinbase.com'">Website</button>
+                    <button class="twitter-btn" onclick="window.location.href='https://twitter.com/coinbase'">X</button>
+                </div>
             </div>
         </div>
     </div>
@@ -144,25 +165,37 @@
                 <img src="bitcoin.png" alt="Bitcoin">
                 <p>Bitcoin</p>
                 <p>$59,640.57 BTC</p>
-                <button>Website</button>
+                <div class="button-container">
+                    <button onclick="window.location.href='https://bitcoin.org'">Website</button>
+                    <button class="twitter-btn" onclick="window.location.href='https://twitter.com/bitcoin'">X</button>
+                </div>
             </div>
             <div class="card">
                 <img src="ethereum.png" alt="Ethereum">
                 <p>Ethereum</p>
                 <p>$2,420.69 ETH</p>
-                <button>Website</button>
+                <div class="button-container">
+                    <button onclick="window.location.href='https://ethereum.org'">Website</button>
+                    <button class="twitter-btn" onclick="window.location.href='https://twitter.com/ethereum'">X</button>
+                </div>
             </div>
             <div class="card">
                 <img src="arbitrum.png" alt="Arbitrum">
                 <p>Arbitrum</p>
                 <p>0.531 ARB</p>
-                <button>Website</button>
+                <div class="button-container">
+                    <button onclick="window.location.href='https://arbitrum.io'">Website</button>
+                    <button class="twitter-btn" onclick="window.location.href='https://twitter.com/arbitrum'">X</button>
+                </div>
             </div>
             <div class="card">
                 <img src="optimism.png" alt="Optimism">
                 <p>Optimism</p>
                 <p>$1.54 OP</p>
-                <button>Website</button>
+                <div class="button-container">
+                    <button onclick="window.location.href='https://optimism.io'">Website</button>
+                    <button class="twitter-btn" onclick="window.location.href='https://twitter.com/optimismFND'">X</button>
+                </div>
             </div>
         </div>
     </div>
@@ -177,12 +210,18 @@
             <div class="card">
                 <img src="metamask.png" alt="Metamask">
                 <p>Metamask</p>
-                <button>Website</button>
+                <div class="button-container">
+                    <button onclick="window.location.href='https://metamask.io'">Website</button>
+                    <button class="twitter-btn" onclick="window.location.href='https://twitter.com/metamask'">X</button>
+                </div>
             </div>
             <div class="card">
                 <img src="rabby.png" alt="Rabbi">
                 <p>Rabbi</p>
-                <button>Website</button>
+                <div class="button-container">
+                    <button onclick="window.location.href='https://rabby.io'">Website</button>
+                    <button class="twitter-btn" onclick="window.location.href='https://twitter.com/rabbywallet'">X</button>
+                </div>
             </div>
         </div>
     </div>
@@ -195,14 +234,20 @@
         </p>
         <div class="card-container">
             <div class="card">
-                <img src="cryptocom-logo.png" alt="Crypto.com">
+                <img src="cryptocom.png" alt="Crypto.com">
                 <p>Crypto.com</p>
-                <button>Website</button>
+                <div class="button-container">
+                    <button onclick="window.location.href='https://crypto.com'">Website</button>
+                    <button class="twitter-btn" onclick="window.location.href='https://twitter.com/cryptocom'">X</button>
+                </div>
             </div>
             <div class="card">
-                <img src="holyheld-logo.png" alt="Holyheld">
+                <img src="holyheld.png" alt="Holyheld">
                 <p>Holyheld</p>
-                <button>Website</button>
+                <div class="button-container">
+                    <button onclick="window.location.href='https://holyheld.com'">Website</button>
+                    <button class="twitter-btn" onclick="window.location.href='https://twitter.com/holyheld'">X</button>
+                </div>
             </div>
         </div>
     </div>
@@ -212,3 +257,4 @@
     </footer>
 </body>
 </html>
+
