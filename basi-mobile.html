@@ -1,1 +1,214 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImparoDeFi - Basi</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        /* Impostazioni di base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fd;
+            color: #333;
+            overflow-y: scroll;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #002752;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.8em;
+        }
+
+        .section {
+            background-color: white;
+            margin: 20px 0;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #002752;
+        }
+
+        .section p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .card {
+            background-color: #e9edf7;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            flex-basis: calc(50% - 10px);
+            margin: 5px 0;
+        }
+
+        .card img {
+            width: 60%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .card button {
+            padding: 10px;
+            border: none;
+            background-color: #0066cc;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background-color: #004a99;
+        }
+
+        footer {
+            background-color: #002752;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>ImparoDeFi - Basi</header>
+
+    <!-- Sezione Comprare e Vendere Crypto -->
+    <div class="section">
+        <h2>Comprare e Vendere Crypto</h2>
+        <p>
+            Ci sono due modi principali per comprare e vendere le cripto:
+            <br>-- Exchange Centralizzate (CEX)
+            <br>-- On/Off-Ramps
+        </p>
+        <div class="card-container">
+            <div class="card">
+                <img src="kraken-logo.png" alt="Kraken">
+                <p>Kraken</p>
+                <button>Website</button>
+            </div>
+            <div class="card">
+                <img src="coinbase-logo.png" alt="Coinbase">
+                <p>Coinbase</p>
+                <button>Website</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sezione Blockchains -->
+    <div class="section">
+        <h2>Blockchains</h2>
+        <p>
+            La blockchain è una tecnologia rivoluzionaria che sta trasformando il modo in cui memorizziamo e trasferiamo dati.
+            <br>-- Cos’è una Blockchain?
+            <br>-- Come funziona?
+            <br>-- Vantaggi e casi d’uso
+        </p>
+        <div class="card-container">
+            <div class="card">
+                <img src="bitcoin-logo.png" alt="Bitcoin">
+                <p>Bitcoin</p>
+                <p>$59,640.57 BTC</p>
+                <button>Website</button>
+            </div>
+            <div class="card">
+                <img src="ethereum-logo.png" alt="Ethereum">
+                <p>Ethereum</p>
+                <p>$2,420.69 ETH</p>
+                <button>Website</button>
+            </div>
+            <div class="card">
+                <img src="arbitrum-logo.png" alt="Arbitrum">
+                <p>Arbitrum</p>
+                <p>0.531 ARB</p>
+                <button>Website</button>
+            </div>
+            <div class="card">
+                <img src="optimism-logo.png" alt="Optimism">
+                <p>Optimism</p>
+                <p>$1.54 OP</p>
+                <button>Website</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sezione Portafogli Crypto -->
+    <div class="section">
+        <h2>Portafogli Crypto (wallet)</h2>
+        <p>
+            I portafogli crypto consentono di ricevere, inviare e conservare criptovalute. Sono strumenti essenziali per chi opera nel mondo delle criptovalute.
+        </p>
+        <div class="card-container">
+            <div class="card">
+                <img src="metamask-logo.png" alt="Metamask">
+                <p>Metamask</p>
+                <button>Website</button>
+            </div>
+            <div class="card">
+                <img src="rabbi-logo.png" alt="Rabbi">
+                <p>Rabbi</p>
+                <button>Website</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sezione Carte Crypto -->
+    <div class="section">
+        <h2>Carte Crypto</h2>
+        <p>
+            Le carte di debito Crypto offrono un metodo alternativo per usare i fondi Crypto nel mondo reale.
+        </p>
+        <div class="card-container">
+            <div class="card">
+                <img src="cryptocom-logo.png" alt="Crypto.com">
+                <p>Crypto.com</p>
+                <button>Website</button>
+            </div>
+            <div class="card">
+                <img src="holyheld-logo.png" alt="Holyheld">
+                <p>Holyheld</p>
+                <button>Website</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        ImparoDeFi © 2024. All rights reserved.
+    </footer>
+</body>
+</html>
