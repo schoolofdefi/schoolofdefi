@@ -49,7 +49,7 @@
         /* Navigazione nascosta (tendina) */
         .nav-menu {
             display: none;
-            flex-direction: column;
+            flex-wrap: wrap;
             position: absolute;
             top: 60px; /* Posizionato sotto l'header */
             right: 20px;
@@ -60,19 +60,19 @@
         }
 
         .nav-menu button {
-            background-color: white;
-            color: #0066cc;
+            background-color: #002752;
+            color: white;
             border: none;
             padding: 10px 15px;
-            margin: 5px 0;
+            margin: 5px;
             border-radius: 5px;
             cursor: pointer;
-            text-align: left;
+            flex-basis: calc(50% - 10px); /* Due pulsanti per riga */
+            text-align: center;
         }
 
         .nav-menu button:hover {
             background-color: #004a99;
-            color: white;
         }
 
         /* Mostra il menu quando cliccato */
@@ -158,12 +158,18 @@
 
     <!-- Menu a tendina nascosto -->
     <nav class="nav-menu" id="nav-menu">
-        <button onclick="location.href='basi-mobile.html'">BASI</button>
-        <button onclick="location.href='defi.html'">DEFI</button>
-        <button onclick="location.href='nft.html'">NFT</button>
-        <button onclick="location.href='giochi.html'">GIOCHI</button>
-        <button onclick="location.href='airdrops.html'">AIRDROPS</button>
-        <button onclick="location.href='tienitiaggiornato.html'">TIENITI AGGIORNATO</button>
+        <button onclick="location.href='manuale.html'">Manuale A-Z</button>
+        <button onclick="location.href='wallets.html'">Portafogli (Wallets)</button>
+        <button onclick="location.href='blockchains.html'">Blockchains</button>
+        <button onclick="location.href='comprarecrypto.html'">Comprare e Vendere Crypto</button>
+        <button onclick="location.href='defi.html'">DeFi</button>
+        <button onclick="location.href='airdrops.html'">Airdrops</button>
+        <button onclick="location.href='nft.html'">NFTs</button>
+        <button onclick="location.href='giochi.html'">Giochi</button>
+        <button onclick="location.href='strumenti.html'">Strumenti</button>
+        <button onclick="location.href='cartecrypto.html'">Carte Crypto</button>
+        <button onclick="location.href='tienitiaggiornato.html'">Tieniti Aggiornato</button>
+        <button onclick="location.href='lavorainweb3.html'">Lavora in Web3</button>
     </nav>
 
     <section class="main-content">
