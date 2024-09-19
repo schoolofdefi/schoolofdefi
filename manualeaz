@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuale A-Z ImparoDeFi</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fd;
+            color: #fff;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            background-color: #1c1c1e;
+            margin: 20px 0;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 1.5em;
+            color: #f4f7fd;
+        }
+
+        .section p {
+            font-size: 1em;
+            color: #d1d1d1;
+            line-height: 1.6;
+        }
+
+        .expandable {
+            cursor: pointer;
+            font-size: 1.2em;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            color: #f4f7fd;
+        }
+
+        .expandable .arrow {
+            margin-right: 10px;
+            transform: rotate(0);
+            transition: transform 0.3s ease;
+        }
+
+        .expandable.open .arrow {
+            transform: rotate(90deg);
+        }
+
+        .content {
+            display: none;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .content.show {
+            display: block;
+        }
+
+        .blockchain-list, .dapps-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .blockchain-item, .dapp-item {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px;
+            width: calc(50% - 20px);
+        }
+
+        @media (max-width: 768px) {
+            .blockchain-item, .dapp-item {
+                width: 100%;
+            }
+        }
+
+        footer {
+            background-color: #1c1c1e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Manuale A-Z ImparoDeFi</h1>
+
+    <!-- Sezione Blockchain -->
+    <div class="section">
+        <h2>Cosa sono le criptovalute? Cos'è il metaverso, il mondo Web3, la DeFi e l'economia digitale?</h2>
+        <p>Per iniziare, dovete sapere che a noi interessa usare questo mondo digitale per gli enormi vantaggi e benefici che comporta, come ad esempio:</p>
+        <ul>
+            <li>Conservare il denaro in maniera sicura ed incensurabile</li>
+            <li>Inviare denaro istantaneamente a costo quasi zero</li>
+            <li>Ottenere rendimenti più alti sui propri risparmi in totale autonomia e sicurezza</li>
+        </ul>
+
+        <div class="expandable" onclick="toggleContent('blockchainContent')">
+            <span class="arrow">▶</span> Cos'è una Blockchain?
+        </div>
+        <div class="content" id="blockchainContent">
+            <p>Una Blockchain è un database decentralizzato: criptato, condiviso e distribuito tra più nodi di una rete...</p>
+        </div>
+
+        <div class="expandable" onclick="toggleContent('blockchainList')">
+            <span class="arrow">▶</span> Lista Blockchain
+        </div>
+        <div class="content" id="blockchainList">
+            <div class="blockchain-list">
+                <div class="blockchain-item">
+                    <h3>Bitcoin</h3>
+                    <p>La blockchain di Bitcoin è la tecnologia rivoluzionaria...</p>
+                </div>
+                <div class="blockchain-item">
+                    <h3>Ethereum</h3>
+                    <p>Ethereum consente la creazione e l'esecuzione di smart contract...</p>
+                </div>
+                <!-- Altri Blockchain come da immagini -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Sezione DeFi -->
+    <div class="section">
+        <div class="expandable" onclick="toggleContent('defiContent')">
+            <span class="arrow">▶</span> Cosa sono le applicazioni decentralizzate (DeFi)?
+        </div>
+        <div class="content" id="defiContent">
+            <p>Le applicazioni DeFi, o applicazioni di Finanza Decentralizzata...</p>
+        </div>
+
+        <div class="expandable" onclick="toggleContent('dappsList')">
+            <span class="arrow">▶</span> Applicazioni DeFi
+        </div>
+        <div class="content" id="dappsList">
+            <div class="dapps-list">
+                <div class="dapp-item">
+                    <h3>Uniswap</h3>
+                    <p>Uniswap è un protocollo decentralizzato di scambio...</p>
+                </div>
+                <div class="dapp-item">
+                    <h3>AAVE</h3>
+                    <p>AAVE è un protocollo di mercato della liquidità decentralizzata...</p>
+                </div>
+                <!-- Altre dApps come da immagini -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        ImparoDeFi © 2024. All rights reserved.
+    </footer>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            content.classList.toggle("show");
+            var expandable = content.previousElementSibling;
+            expandable.classList.toggle("open");
+        }
+    </script>
+
+</body>
+</html>
